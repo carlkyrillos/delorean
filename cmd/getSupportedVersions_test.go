@@ -25,7 +25,7 @@ func TestGetSupportedVersionsCmd(t *testing.T) {
 			olmType:       "managed-api-service",
 			majorVersions: 1,
 			minorVersions: 3,
-			repo:          "https://gitlab.cee.redhat.com/service/managed-tenants.git",
+			repo:          "https://gitlab.cee.redhat.com/ckyrillo/managed-tenants.git",
 			expectError:   false,
 		},
 		{
@@ -33,7 +33,7 @@ func TestGetSupportedVersionsCmd(t *testing.T) {
 			olmType:       "integreatly-operator",
 			majorVersions: 1,
 			minorVersions: 3,
-			repo:          "https://gitlab.cee.redhat.com/service/managed-tenants.git",
+			repo:          "https://gitlab.cee.redhat.com/ckyrillo/managed-tenants.git",
 			expectError:   false,
 		},
 		{
@@ -361,8 +361,8 @@ func TestGetOlmTypePath(t *testing.T) {
 		{
 			description:        "Get values for RHOAM",
 			olmType:            types.OlmTypeRhoam,
-			expectedBundlePath: "addons/managed-api-service/bundles",
-			expectedFilePath:   "addons/managed-api-service/metadata/production/addon.yaml",
+			expectedBundlePath: "addons/rhoams/bundles",
+			expectedFilePath:   "addons/rhoams/metadata/production/addon.yaml",
 			hasError:           false,
 		},
 		{
