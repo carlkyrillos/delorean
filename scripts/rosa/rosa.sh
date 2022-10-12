@@ -68,7 +68,7 @@ STS_ENABLED="${STS_ENABLED:-true}"
 
 provision_rosa_cluster() {
     rosa login --env=$OCM_ENV
-    rosa create account-roles --mode auto -y
+#    rosa create account-roles --mode auto -y
     sleep 30
     args=(--cluster-name $CLUSTER_NAME --region $AWS_REGION --compute-machine-type $MACHINE_TYPE)
     if [[ $ENABLE_AUTOSCALING == 'true' ]]; then
